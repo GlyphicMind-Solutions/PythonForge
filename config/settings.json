@@ -1,0 +1,10 @@
+{
+  "developer_mode": false,
+  "default_max_tokens": 32768,
+  "deep_analysis_chunk_size": 4000,
+  "ui": {
+    "theme": "dark",
+    "font_size": 12
+  }
+}
+
