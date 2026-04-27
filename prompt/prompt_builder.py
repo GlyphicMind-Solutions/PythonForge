@@ -79,7 +79,7 @@ class PromptBuilder:
         """
         return (
             "<|start|>system<|message|>\n"
-            "\"-You are an Agent using PyForge. Generate Python code only. No markdown. End with FIN~\"\n"
+            "\"-You are an Agent using PythonForge. Generate Python code only. No markdown. End with FIN~\"\n"
             "\"-Rules-\"\n"
             "\"1. Provide your reasoning ONLY inside the assistant analysis channel:\\n\"\n"
             "\"   <|start|>assistant<|channel|>analysis<|message|>\\n\"\n"
@@ -112,7 +112,7 @@ class PromptBuilder:
         return (
             "<|im_start|>system\n"
             "[INST]\n\n"
-            "You are an Agent using PyForge. Generate Python code only. No markdown. End with FIN~.\n"
+            "You are an Agent using PythonForge. Generate Python code only. No markdown. End with FIN~.\n"
             "[/INST]\n"
             "<|im_end|>\n\n"
             "<|im_start|>user\n"
@@ -130,7 +130,7 @@ class PromptBuilder:
         """
         return (
             "<|im_start|>system\n"
-            "Generate Python code only. No markdown. End with FIN~.\n"
+            "You are an Agent using PythonForge. Generate Python code only. No markdown. End with FIN~.\n"
             "<|im_end|>\n\n"
             "<|im_start|>user\n"
             f"{topic}\n"
@@ -164,7 +164,7 @@ class PromptBuilder:
         """
         return (
             "### System\n"
-            "Generate Python code only. No markdown. End with FIN~.\n\n"
+            "You are an Agent using PythonForge. Generate Python code only. No markdown. End with FIN~.\n\n"
             "### User\n"
             f"{topic}\n\n"
             "### Assistant\n"
@@ -179,7 +179,7 @@ class PromptBuilder:
         """
         return (
             "<|im_start|>system\n"
-            "You are PyForge. Generate Python code only. No markdown. End with FIN~.\n"
+            "You are an Agent using PyForge. Generate Python code only. No markdown. End with FIN~.\n"
             "<|im_end|>\n\n"
             "<|im_start|>user\n"
             f"{topic}\n"
@@ -209,4 +209,3 @@ class PromptBuilder:
         thoughts = t[:idx].replace("Thinking:", "").strip()
         content = t[idx:].replace("Answer:", "").strip()
         return thoughts, content
-
