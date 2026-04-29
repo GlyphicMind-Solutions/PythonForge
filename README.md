@@ -23,7 +23,7 @@ It includes a full GUI, multi-model support, deep analysis, and a clean file‑f
 ---
 
 ## 📁 Project Structure
-
+```
 PythonForge/
 │
 ├── pyforge.py
@@ -55,42 +55,38 @@ PythonForge/
 ├── pending/
 ├── saved/
 └── logs/
-
+```
 
 ---
 
 ## 🚀 Getting Started
-
-### 1. Install dependencies
-
+1. Install dependencies
 ```bash
 pip install -r requirements.txt
 
 ```
-
-### 2. Add your .gguf models
-Place them in the folder:
-
-/models/
-
-
-### 3. Edit models/manifest.yaml
-Example:
-
+2. Add your .gguf models
+- Place them in the folder:
+```
+./PythonForge/models/
+```
+3. Edit models/manifest.yaml
+- Example:
+```
 models:
   gpt_default:
     path: ./models/gpt-oss-20b.gguf
     n_ctx: 32768
     template: gpt
-
-
-### 4. Run PyForge
-
+```
+4. Run PyForge
+```
 python pyforge.py
+```
 
 ---
 
-🧠 Deep Analysis
+### 🧠 Deep Analysis
 PyForge includes a multi-stage analysis pipeline:
 
 Chunk the code
@@ -104,21 +100,21 @@ Rewrite the code using the summary
 This helps restructure large or messy codebases.
 
 
-📦 Storage
+### 📦 Storage
 -Generated files go to folder:
-
-/storage/pending/
-
+```
+./PythonForge/storage/pending/
+```
 
 -Saved files go to folder:
-
-/storage/saved/
-
+```
+./PythonForge/storage/saved/
+```
 
 -Logs go to folder:
-
-/storage/logs/
-
+```
+./PythonForge/storage/logs/
+```
 
 📝 License
 read license
